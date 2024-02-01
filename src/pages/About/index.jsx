@@ -1,8 +1,14 @@
-import './style.css';
+import PageBanner from '../../components/PageBanner';
+import Gallery from '../../components/Gallery';
+
+import banner from '../../images/about-banner.jpg';
 
 function About() {
   return (
-    <div>About</div>
+    <main>
+      <PageBanner imgPath={banner} />
+      <Gallery />
+    </main>
   );
 }
 
