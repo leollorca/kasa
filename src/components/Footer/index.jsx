@@ -1,7 +1,12 @@
+import './style.sass';
+
+import Logo from '../Logo';
+
 function Footer() {
   return (
     <footer>
-      <p>Footer</p>
+      <Logo width={'122px'} isFooter={true} />
+      <div>© 2020 Kasa. All rights reserved</div>
     </footer>
   );
 }
