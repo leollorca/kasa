@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 
 import Slideshow from "../../components/Slideshow";
 import Rating from '../../components/Rating';
+import Collapse from '../../components/Collapse';
 
 import data from "../../data.json";
 
@@ -15,6 +16,9 @@ function Rent() {
   const tags = rent.tags.map((tag, index) => <li key={index}>{tag}</li>);
 
   const fullName = rent.host.name.split(' ');
+
+  const equipments = 
+    rent.equipments.map((equipment, index) => <li key={index}>{equipment}</li>);
 
   return (
     <main>
@@ -38,7 +42,10 @@ function Rent() {
           <Rating rating={rent.rating} />
         </div>
       </div>
-      <div className="collapses">collapses</div>
+      <div className="rent-collapses">
+        <Collapse name="Description" content={rent.description} />
+        <Collapse name=" Équipements" content={equipments} />
+      </div>
     </main>
   )
 }
