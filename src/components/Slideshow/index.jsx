@@ -26,10 +26,10 @@ function Slideshow({ photos }) {
 
   return (
     <div className="slideshow">
-      <img src={photos[currentPhoto]} />
+      <img src={photos[currentPhoto]} alt="rent room" />
       <div className='controls'>
-        <img onClick={goToPreviousPhoto} src={previousIcon} />
-        <img onClick={goToNextPhoto} src={nextIcon} />
+        <img onClick={goToPreviousPhoto} src={previousIcon} alt="previous" />
+        <img onClick={goToNextPhoto} src={nextIcon} alt="next" />
       </div>
       <div className='numbering'>
         {`${currentPhoto + 1}/${photos.length}`}

@@ -1,9 +1,9 @@
 import logo from '../../images/logo.svg';
-import footerLogo from '../../images/logo-white.svg';
+import whiteLogo from '../../images/white-logo.svg';
 
 function Logo ({width = '210px', isFooter = false}) {
   return (
-    <img src={isFooter ? footerLogo : logo } width={width} alt="Kasa logo" />
+    <img src={isFooter ? whiteLogo : logo } width={width} alt="Kasa logo" />
   );
 }
 
