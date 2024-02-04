@@ -1,6 +1,6 @@
 import './style.sass';
 
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 
 import Slideshow from "../../components/Slideshow";
 import Rating from '../../components/Rating';
@@ -12,6 +12,10 @@ function Rent() {
   const { id } = useParams();
 
   const rent = data.find(rent => rent.id === id);
+
+  if (!rent) {
+    return <Navigate to="/*" />;
+  }
 
   const tags = rent.tags.map((tag, index) => <li key={index}>{tag}</li>);
 

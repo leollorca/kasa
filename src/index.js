@@ -7,6 +7,7 @@ import './index.sass';
 import Home from './pages/Home';
 import About from './pages/About';
 import Rent from './pages/Rent';
+import NotFound from './pages/NotFound';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -20,6 +21,7 @@ root.render(
         <Route path="/" element={<Home />} /> 
         <Route path="/about" element={<About />} />
         <Route path="/rent/:id" element={<Rent />} />
+        <Route path='*' element={<NotFound />}/>
       </Routes>
       <Footer />
     </Router>
