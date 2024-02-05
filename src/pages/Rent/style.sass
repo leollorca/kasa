@@ -4,7 +4,20 @@
   justify-content: space-between
   margin-bottom: 70px
 
+  @media (max-width: 990px)
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    margin-bottom: 24px
+
   .left
+    @media (max-width: 990px)
+      margin-bottom: 24px
+
+    h1
+      @media (max-width: 990px)
+        font-size: 18px
+
     h2
       font-size: 18px
       margin: 4px 0 16px 0
@@ -23,11 +36,21 @@
         border-radius: 10px
         background-color: #FF6060
 
+        @media (max-width: 990px)
+          padding: 0 12px
+          font-size: 10px
+
   .right
     display: flex
     flex-direction: column
     justify-content: space-between
     align-items: flex-end
+
+    @media (max-width: 990px)
+      flex-direction: row-reverse
+      justify-content: space-between
+      align-items: center
+      width: 100%
 
     .host
       display: flex
@@ -40,10 +63,18 @@
         align-items: flex-end
         gap: 2px
 
+        @media (max-width: 990px)
+          font-size: 12px
+
       .avatar
         width: 64px
         height: 64px
         border-radius: 32px
+
+        @media (max-width: 990px)
+          width: 48px
+          height: 48px
+          border-radius: 24px
 
         img
           width: 100%
@@ -54,3 +85,7 @@
 .rent-collapses
   display: flex
   gap: 70px
+
+  @media (max-width: 990px)
+    flex-direction: column
+    gap: 24px

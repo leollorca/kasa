@@ -5,11 +5,19 @@
   margin-bottom: 70px
   border-radius: 25px
 
+  @media (max-width: 990px)
+    height: 255px
+    margin-bottom: 24px
+    border-radius: 10px
+
   img
     width: 100%
     height: 100%
     object-fit: cover
     border-radius: 25px
+
+    @media (max-width: 990px)
+      border-radius: 10px
 
   .controls
     position: absolute
@@ -21,10 +29,17 @@
     height: 100%
     padding: 0 32px
 
+    @media (max-width: 990px)
+      padding: 0 16px
+
     img
       width: 32px
       height: 32px
       cursor: pointer
+
+      @media (max-width: 990px)
+        width: 24px
+        height: 24px
 
   .numbering
     position: absolute
@@ -32,3 +47,6 @@
     width: 100%
     text-align: center
     color: #fff
+
+    @media (max-width: 990px)
+      bottom: 16px

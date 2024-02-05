@@ -7,14 +7,26 @@ header
     width: 100%
     padding: 70px
 
+  @media (max-width: 990px)
+    padding: 24px
+
   nav
     display: flex
     justify-content: space-between
     align-items: center
 
+    .logo
+      @media (max-width: 990px)
+        width: 145px
+
     ul
       display: flex
       gap: 32px
+
+      @media (max-width: 990px)
+        gap: 16px
+        font-size: 12px
+        text-transform: uppercase
 
       .active-page
         text-decoration: underline
